@@ -12,9 +12,6 @@ export default function App() {
       <AppLayout>
         <ViewHome />
       </AppLayout>
-
-      {/* <Welcome />
-      <ColorSchemeToggle /> */}
     </MantineProvider>
   )
 }

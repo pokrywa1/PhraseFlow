@@ -50,12 +50,13 @@ export const myTheme = {
 
 export const vars = themeToVars(theme)
 
-export const resolver: CSSVariablesResolver = (theme) => ({
+// theme
+export const resolver: CSSVariablesResolver = () => ({
   variables: {},
   light: {
-    '--mantine-color-text': theme.other.primaryText,
+    // '--mantine-color-text': theme.other.primaryText,
   },
   dark: {
-    '--mantine-color-text': theme.other.primaryText,
+    // '--mantine-color-text': theme.other.primaryText,
   },
 })
