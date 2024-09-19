@@ -1,9 +1,15 @@
-import { Text } from '@mantine/core'
+import { Stack } from '@mantine/core'
+
+import { Hero } from './_components/Hero'
+import { Introduction } from './_components/Introduction'
+import { WhyUs } from './_components/WhyUs'
 
 export const ViewHome = () => {
   return (
-    <div>
-      <Text>Dashboard</Text>
-    </div>
+    <Stack gap={80}>
+      <Hero />
+      <Introduction />
+      <WhyUs />
+    </Stack>
   )
 }

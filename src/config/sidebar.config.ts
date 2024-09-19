@@ -12,16 +12,7 @@ export const sidebarItems: TSidebarItem[] = [
     label: 'Introduction',
     href: '/introduction',
   },
-  {
-    type: 'link',
-    label: 'Authentication',
-    href: '/authentication',
-  },
-  {
-    type: 'link',
-    label: 'Rate Limiting',
-    href: '/rate-limiting',
-  },
+
   {
     type: 'title',
     icon: TbSend,
