@@ -10,6 +10,12 @@ export const sidebar = style({
   position: 'fixed',
 
   zIndex: 999,
+
+  '@media': {
+    [vars.smallerThan('md')]: {
+      display: 'none',
+    },
+  },
 })
 
 export const sidebarLinkItem = style({

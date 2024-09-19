@@ -1,11 +1,14 @@
-import { Grid, Stack, Text, ThemeIcon } from '@mantine/core'
-import * as classes from './Sidebar.css'
+import { Burger, Drawer, Grid, Text, ThemeIcon } from '@mantine/core'
+import { useDisclosure } from '@mantine/hooks'
 import { sidebarItems } from '../../config/sidebar.config'
+import * as classes from './Sidebar.css'
 
-export const Sidebar = () => {
+export const BurgerMenuWithButton = () => {
+  const [opened, { toggle, close }] = useDisclosure()
+
   return (
-    <nav className={classes.sidebar}>
-      <Stack gap={0} p={'xs'}>
+    <>
+      <Drawer opened={opened} onClose={close}>
         {sidebarItems.map((item, index) => {
           return (
             <Grid
@@ -31,25 +34,14 @@ export const Sidebar = () => {
             </Grid>
           )
         })}
-
-        {/* <Grid.Col span={2}>
-            <ThemeIcon color={'gray.7'} variant="transparent">
-              <TbHome size={20} />
-            </ThemeIcon>
-          </Grid.Col>
-          <Grid.Col span={10}>
-            <Text fz={'sm'} fw={600}>
-              Getting Started
-            </Text>
-          </Grid.Col>
-
-          <Grid.Col span={2}></Grid.Col>
-          <Grid.Col span={10}>
-            <Text c={'dimmed'} fz={13} fw={500}>
-              Introduction
-            </Text>
-          </Grid.Col> */}
-      </Stack>
-    </nav>
+      </Drawer>
+      <Burger
+        color="gray.6"
+        hiddenFrom={'md'}
+        opened={opened}
+        onClick={toggle}
+        aria-label="Toggle navigation"
+      />
+    </>
   )
 }
