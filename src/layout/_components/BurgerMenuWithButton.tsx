@@ -9,7 +9,7 @@ export const BurgerMenuWithButton = () => {
     <>
       <Drawer hiddenFrom={'md'} opened={opened} onClose={close}>
         <Box pt={'md'}>
-          <SidebarNavItems />
+          <SidebarNavItems closeSidebar={close} />
         </Box>
       </Drawer>
       <Burger

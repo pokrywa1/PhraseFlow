@@ -5,14 +5,18 @@ import * as classes from './Sidebar.css'
 
 import { TSidebarItem } from '../../config/sidebar.types'
 import { Link } from 'react-router-dom'
-export const SidebarNavItems = () => {
+
+type SidebarNavItemsProps = {
+  closeSidebar?: () => void
+}
+export const SidebarNavItems = ({ closeSidebar }: SidebarNavItemsProps) => {
   return (
     <nav>
       {sidebarItems.map((item, index) => {
         return item.type === 'title' ? (
           <Item key={index} item={item} />
         ) : (
-          <Link to={item.href}>
+          <Link to={item.href} onClick={() => closeSidebar && closeSidebar()}>
             <Item key={index} item={item} />
           </Link>
         )

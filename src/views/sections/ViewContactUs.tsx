@@ -37,7 +37,13 @@ const ViewContactUs = () => {
         the following channels:
       </Text>
 
-      <SimpleGrid cols={2} spacing="lg">
+      <SimpleGrid
+        cols={{
+          base: 1,
+          xs: 2,
+        }}
+        spacing="lg"
+      >
         {CONTACT_OPTIONS.map((contact, index) => (
           <ContactCard key={index} {...contact} />
         ))}
