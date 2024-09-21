@@ -1,14 +1,12 @@
-import { Box, Divider, SimpleGrid, Stack, Text } from '@mantine/core'
+import { Divider, SimpleGrid, Stack, Text } from '@mantine/core'
 import * as classes from './ArtivleLayout.css'
 import { Link } from 'react-router-dom'
-type TPageLink = {
-  label: string
-  href: string
-}
+import { TSidebarLinkItem } from '../../config/sidebar.types'
+
 type ArticleLayoutProps = {
   children: React.ReactNode
-  prevPage?: TPageLink
-  nextPage?: TPageLink
+  prevPage?: TSidebarLinkItem
+  nextPage?: TSidebarLinkItem
 }
 export const ArticleLayout = ({ children, prevPage, nextPage }: ArticleLayoutProps) => {
   return (
@@ -17,14 +15,14 @@ export const ArticleLayout = ({ children, prevPage, nextPage }: ArticleLayoutPro
       <Divider my={'md'} />
       <SimpleGrid cols={2}>
         {prevPage ? (
-          <Box className={classes.button}>
+          <Link to={prevPage.href} className={classes.button}>
             <Stack gap={2}>
               <Text fz={'sm'} fw={500} c={'dimmed'}>
                 Prev
               </Text>
               <Text>{prevPage.label}</Text>
             </Stack>
-          </Box>
+          </Link>
         ) : (
           <div />
         )}

@@ -1,5 +1,5 @@
 export const routes = {
-  introduction: '',
+  introduction: '/',
 
   'endpoint-overview': '/endpoint-overview',
   'request-parameters': '/request-parameters',

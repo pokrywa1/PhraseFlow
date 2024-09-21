@@ -1,6 +1,7 @@
 import { Accordion, Text, Title } from '@mantine/core'
 import { ArticleLayout } from '../../layout/article-layout/ArticleLayout'
-import { routes } from '../../routes/routes'
+
+import { SIDEBAR_BASIC_USAGE, SIDEBAR_CONTACT_US } from '../../config/sidebar.config'
 
 const FAQ_DATA = [
   {
@@ -25,16 +26,7 @@ const FAQ_DATA = [
 
 const ViewFaq = () => {
   return (
-    <ArticleLayout
-      prevPage={{
-        href: '/previous',
-        label: 'Previous',
-      }}
-      nextPage={{
-        label: 'Kontakt i wsparcie',
-        href: routes['request-parameters'],
-      }}
-    >
+    <ArticleLayout prevPage={SIDEBAR_BASIC_USAGE} nextPage={SIDEBAR_CONTACT_US}>
       <Title>Frequently Asked Questions (FAQ)</Title>
       <Accordion variant="separated">
         {FAQ_DATA.map((faq, index) => (

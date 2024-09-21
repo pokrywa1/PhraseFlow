@@ -13,3 +13,6 @@ export type TSidebarLink = {
 }
 
 export type TSidebarItem = TSidebarTitle | TSidebarLink
+
+export type TSidebarLinkItem = Extract<TSidebarItem, { type: 'link' }>
+export type TSidebarTitleItem = Extract<TSidebarItem, { type: 'title' }>
