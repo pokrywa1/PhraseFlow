@@ -1,5 +1,6 @@
 import { TbAlertCircle, TbBook, TbCode, TbPhoneCall, TbQuestionMark, TbSend } from 'react-icons/tb'
 import { TSidebarItem } from './sidebar.types'
+import { routes } from '../routes/routes'
 
 export const sidebarItems: TSidebarItem[] = [
   {
@@ -10,7 +11,7 @@ export const sidebarItems: TSidebarItem[] = [
   {
     type: 'link',
     label: 'Introduction',
-    href: '/introduction',
+    href: routes['introduction'],
   },
 
   {
@@ -20,8 +21,8 @@ export const sidebarItems: TSidebarItem[] = [
   },
   {
     type: 'link',
-    label: 'Endpoints Overview',
-    href: '/endpoints-overview',
+    label: 'Endpoint Overview',
+    href: '/endpoint-overview',
   },
   {
     type: 'link',

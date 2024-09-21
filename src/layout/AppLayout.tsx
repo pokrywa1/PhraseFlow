@@ -4,11 +4,12 @@ import { HEADER_HEIGHT, MAX_CONTENT_WIDTH, SIDEBAR_WIDTH } from './layout.consts
 import { Sidebar } from './_components/Sidebar'
 import { useMediaQuery } from '@mantine/hooks'
 import { vars } from '../theme'
+import { Outlet } from 'react-router-dom'
 
 type AppLayoutProps = {
-  children: React.ReactNode
+  render?: () => React.ReactNode
 }
-export const AppLayout = ({ children }: AppLayoutProps) => {
+export const AppLayout = ({ render }: AppLayoutProps) => {
   const smallerThanMd = useMediaQuery(vars.smallerThan('md'))
   return (
     <>
@@ -25,7 +26,7 @@ export const AppLayout = ({ children }: AppLayoutProps) => {
         component="main"
       >
         <Container mt={'xl'} size={MAX_CONTENT_WIDTH}>
-          {children}
+          {render ? render() : <Outlet />}
         </Container>
       </Box>
     </>
