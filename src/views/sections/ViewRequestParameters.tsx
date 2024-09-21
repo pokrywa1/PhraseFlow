@@ -1,22 +1,13 @@
 import { Anchor, List, Text, Title } from '@mantine/core'
 import { ArticleLayout } from '../../layout/article-layout/ArticleLayout'
-import { routes } from '../../routes/routes'
 
 import { ParametersDatatable } from './_components/ParametersDatatable'
 import { LanguageCodesDatatable } from './_components/LanguageCodesDatatable'
+import { SIDEBAR_ENDPOINT_OVERVIEW, SIDEBAR_RESPONSE_STRUCTURE } from '../../config/sidebar.config'
 
 const ViewRequestParameters = () => {
   return (
-    <ArticleLayout
-      prevPage={{
-        href: '/previous',
-        label: 'Previous',
-      }}
-      nextPage={{
-        label: 'Kontakt i wsparcie',
-        href: routes['request-parameters'],
-      }}
-    >
+    <ArticleLayout prevPage={SIDEBAR_ENDPOINT_OVERVIEW} nextPage={SIDEBAR_RESPONSE_STRUCTURE}>
       <Title order={1}>Request Parameters</Title>
       <Text>
         To make a successful request to the translation API, you’ll need to provide two key

@@ -2,20 +2,12 @@ import { Text, Title } from '@mantine/core'
 import { ArticleLayout } from '../../layout/article-layout/ArticleLayout'
 import { Code } from '../../components/mantine/Code'
 import { API_URL } from '../../config/env'
-import { routes } from '../../routes/routes'
+
+import { SIDEBAR_INTRODUCTION, SIDEBAR_REQUEST_PARAMETERS } from '../../config/sidebar.config'
 
 const ViewEndpointOverview = () => {
   return (
-    <ArticleLayout
-      prevPage={{
-        href: '/previous',
-        label: 'Previous',
-      }}
-      nextPage={{
-        label: 'Kontakt i wsparcie',
-        href: routes['request-parameters'],
-      }}
-    >
+    <ArticleLayout prevPage={SIDEBAR_INTRODUCTION} nextPage={SIDEBAR_REQUEST_PARAMETERS}>
       <Title order={1}>Endpoint Overview</Title>
       <Text>
         In this section, you’ll find an overview of the key endpoints used to interact with our

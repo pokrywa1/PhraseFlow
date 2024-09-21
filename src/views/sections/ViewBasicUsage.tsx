@@ -5,18 +5,16 @@ import { Code } from '../../components/mantine/Code'
 import { codeForBasicUsageExample } from './utils/codeForBasicUsageExample'
 import { API_URL } from '../../config/env'
 import { Link } from 'react-router-dom'
+import {
+  SIDEBAR_FREQUENTLY_ASKED_QUESTIONS,
+  SIDEBAR_RESPONSE_STRUCTURE,
+} from '../../config/sidebar.config'
 
 const ViewBasicUsage = () => {
   return (
     <ArticleLayout
-      prevPage={{
-        href: '/previous',
-        label: 'Previous',
-      }}
-      nextPage={{
-        label: 'Kontakt i wsparcie',
-        href: routes['request-parameters'],
-      }}
+      prevPage={SIDEBAR_RESPONSE_STRUCTURE}
+      nextPage={SIDEBAR_FREQUENTLY_ASKED_QUESTIONS}
     >
       <Title order={1}>Basic Usage</Title>
       <Text>

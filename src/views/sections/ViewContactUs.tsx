@@ -3,6 +3,7 @@ import { ArticleLayout } from '../../layout/article-layout/ArticleLayout'
 import { FaGithub, FaGoogle, FaLinkedin } from 'react-icons/fa'
 import { IconType } from 'react-icons'
 import { Link } from 'react-router-dom'
+import { SIDEBAR_FREQUENTLY_ASKED_QUESTIONS } from '../../config/sidebar.config'
 
 const CONTACT_OPTIONS = [
   {
@@ -29,12 +30,7 @@ const CONTACT_OPTIONS = [
 
 const ViewContactUs = () => {
   return (
-    <ArticleLayout
-      prevPage={{
-        href: '/previous',
-        label: 'Previous',
-      }}
-    >
+    <ArticleLayout prevPage={SIDEBAR_FREQUENTLY_ASKED_QUESTIONS}>
       <Title>Contact Us</Title>
       <Text>
         If you have any questions or need further assistance, feel free to reach out to us through
