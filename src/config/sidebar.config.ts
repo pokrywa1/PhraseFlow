@@ -1,4 +1,4 @@
-import { TbAlertCircle, TbBook, TbCode, TbPhoneCall, TbQuestionMark, TbSend } from 'react-icons/tb'
+import { TbBook, TbCode, TbPhoneCall, TbQuestionMark, TbSend } from 'react-icons/tb'
 import { TSidebarItem } from './sidebar.types'
 import { routes } from '../routes/routes'
 
@@ -22,33 +22,33 @@ export const sidebarItems: TSidebarItem[] = [
   {
     type: 'link',
     label: 'Endpoint Overview',
-    href: '/endpoint-overview',
+    href: routes['endpoint-overview'],
   },
   {
     type: 'link',
     label: 'Request Parameters',
-    href: '/request-parameters',
+    href: routes['request-parameters'],
   },
   {
     type: 'link',
     label: 'Response Structure',
-    href: '/response-structure',
+    href: routes['response-structure'],
   },
-  {
-    type: 'title',
-    label: 'Error Handling',
-    icon: TbAlertCircle,
-  },
-  {
-    type: 'link',
-    label: 'Error Codes',
-    href: '/error-codes',
-  },
-  {
-    type: 'link',
-    label: 'Common Issues',
-    href: '/common-issues',
-  },
+  // {
+  //   type: 'title',
+  //   label: 'Error Handling',
+  //   icon: TbAlertCircle,
+  // },
+  // {
+  //   type: 'link',
+  //   label: 'Error Codes',
+  //   href: '/error-codes',
+  // },
+  // {
+  //   type: 'link',
+  //   label: 'Common Issues',
+  //   href: '/common-issues',
+  // },
   {
     type: 'title',
     label: 'Examples',
@@ -57,13 +57,13 @@ export const sidebarItems: TSidebarItem[] = [
   {
     type: 'link',
     label: 'Basic Usage',
-    href: '/basic-usage',
+    href: routes['basic-usage'],
   },
-  {
-    type: 'link',
-    label: 'Code Samples',
-    href: '/code-samples',
-  },
+  // {
+  //   type: 'link',
+  //   label: 'Code Samples',
+  //   href: '/code-samples',
+  // },
   {
     type: 'title',
     label: 'FAQ',
@@ -72,7 +72,7 @@ export const sidebarItems: TSidebarItem[] = [
   {
     type: 'link',
     label: 'Frequently Asked Questions',
-    href: '/faq',
+    href: routes['faq'],
   },
   {
     type: 'title',
@@ -82,11 +82,6 @@ export const sidebarItems: TSidebarItem[] = [
   {
     type: 'link',
     label: 'Contact Us',
-    href: '/contact',
-  },
-  {
-    type: 'link',
-    label: 'API Status',
-    href: '/status',
+    href: routes['contact-us'],
   },
 ]
