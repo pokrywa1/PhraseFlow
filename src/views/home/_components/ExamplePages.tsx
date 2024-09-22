@@ -1,27 +1,29 @@
 import { Card, Group, SimpleGrid, Text, ThemeIcon } from '@mantine/core'
 import { IconType } from 'react-icons'
 import { TbCode, TbPhoneCall, TbQuestionMark, TbSend } from 'react-icons/tb'
+import { routes } from '../../../routes/routes'
+import { Link } from 'react-router-dom'
 
 const EXAMPLE_PAGES: ExamplePageProps[] = [
   {
     icon: TbSend,
-    label: 'Making Requests',
-    href: '/making-requests',
+    label: 'Endpoint Overview',
+    href: routes['endpoint-overview'],
   },
   {
-    label: 'Examples',
+    label: 'Basic Usage',
     icon: TbCode,
-    href: '/examples',
+    href: routes['basic-usage'],
   },
   {
     label: 'FAQ',
     icon: TbQuestionMark,
-    href: '/faq',
+    href: routes['faq'],
   },
   {
     label: 'Contact & Support',
     icon: TbPhoneCall,
-    href: '/contact-support',
+    href: routes['contact-us'],
   },
 ]
 
@@ -46,21 +48,23 @@ type ExamplePageProps = {
   icon: IconType
   href: string
 }
-const ExamplePage = ({ icon: Icon, label }: ExamplePageProps) => {
+const ExamplePage = ({ icon: Icon, label, href }: ExamplePageProps) => {
   return (
-    <Card
-      withBorder
-      radius={'md'}
-      style={{
-        cursor: 'pointer',
-      }}
-    >
-      <Group>
-        <ThemeIcon variant="transparent">
-          <Icon size={20} />
-        </ThemeIcon>
-        <Text fw={500}>{label}</Text>
-      </Group>
-    </Card>
+    <Link to={href}>
+      <Card
+        withBorder
+        radius={'md'}
+        style={{
+          cursor: 'pointer',
+        }}
+      >
+        <Group>
+          <ThemeIcon variant="transparent">
+            <Icon size={20} />
+          </ThemeIcon>
+          <Text fw={500}>{label}</Text>
+        </Group>
+      </Card>
+    </Link>
   )
 }

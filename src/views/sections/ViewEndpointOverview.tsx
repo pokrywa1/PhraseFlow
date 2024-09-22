@@ -16,7 +16,7 @@ const ViewEndpointOverview = () => {
       </Text>
       <Title order={2}>Base URL</Title>
       <Text>All requests should be sent to the following base URL:</Text>
-      <Code>{API_URL}</Code>
+      <Code>{API_URL}api/translation</Code>
       <Text>
         This is the endpoint to which you will need to append the required parameters (such as the
         language code and text) in your request
