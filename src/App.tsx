@@ -8,7 +8,11 @@ import { AppRoutes } from './views/AppRoutes'
 
 export default function App() {
   return (
-    <MantineProvider theme={myTheme['light']} cssVariablesResolver={resolver}>
+    <MantineProvider
+      theme={myTheme['light']}
+      defaultColorScheme="auto"
+      cssVariablesResolver={resolver}
+    >
       <AppRoutes />
     </MantineProvider>
   )
